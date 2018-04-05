@@ -1,0 +1,134 @@
+#tiendas
+  .lineass
+    img
+      position: fixed
+      height: 100vh
+      top: 0
+      right: 0
+  .contenedor
+    margin-top: 150px
+    width: 70vw
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 450px
+    .directorio-lead
+      margin-bottom: 50px
+      h2
+        font-size: 40px
+        font-family: $roboto
+    .directorio
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      grid-gap: 20px
+      .left, .center, .rigth
+        .categoria
+          margin-bottom: 50px
+          h3
+            color: $azul
+            font-family: $roboto
+            font-size: 21px
+            margin-bottom: 50px
+          .menos
+            margin-bottom: 0 !important
+            transition: all 400ms ease
+            .simbolo
+              border: solid 1px $rojo !important
+              .linea-h
+                background: $rojo !important
+              .linea-v
+                opacity: 0
+                transition: all 300ms ease
+            .info
+              max-height: 400px !important
+              box-sizing: border-box
+              transition: all 800ms ease
+              p
+                strong
+                  font-weight: $bold
+          .tienda
+            cursor: pointer
+            margin-bottom: -30px
+            transition: all 400ms ease
+            .simbolo
+              float: left
+              width: 18px
+              height: 18px
+              border-radius: 100%
+              border: solid 1px $gris-oscuro
+              position: relative
+              transition: all 800ms ease
+              .linea-v
+                width: 1px
+                height: 60%
+                background: $gris-oscuro
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                transition: all 300ms ease
+              .linea-h
+                width: 60%
+                height: 1px
+                background: $gris-oscuro
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                transition: all 300ms ease
+            &:hover
+              .simbolo
+                cursor: pointer
+                transition: all 800ms ease
+                border: solid 1px $verde
+                .linea-h
+                  transition: all 300ms ease
+                  background: $verde
+                .linea-v
+                  transition: all 300ms ease
+                  background: $verde
+
+            p
+              font-size: 16px
+              margin-left: 40px
+              color: $gris
+            .info
+              background: $gris-claro
+              max-height: 0
+              overflow: hidden
+              display: inline-block
+              transition: max-height 800ms ease
+              padding: 0 20px 0 0
+@media screen and (max-width: 840px)
+  #tiendas
+    .lineass
+      display: none
+      img
+    .contenedor
+      width: 85vw
+      .directorio-lead
+        h2
+      .directorio
+        display: grid
+        grid-template-columns: 1fr !important
+        grid-gap: 0 !important
+        .left, .center, .rigth
+          .categoria
+            margin-bottom: 50px
+            h3
+            .menos
+              .simbolo
+                .linea-h
+                .linea-v
+              .info
+                p
+            .tienda
+              .simbolo
+              p
+                margin-left: 25px
+              .info
+                background: $gris-claro
+                max-height: 0
+                overflow: hidden
+                display: inline-block
+                transition: max-height 800ms ease
+                padding: 0 20px 0 0

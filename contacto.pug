@@ -1,0 +1,76 @@
+doctype
+head
+  title Paseo Andanza
+  meta(charset="utf-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  meta(name="format-detection" content="telephone=no")
+  link(rel="icon" href="assets/img/favicon.png" type="image/x-icon")
+  link(rel="stylesheet" type="text/css" href="assets/css/style.css")
+  link(href="https://fonts.googleapis.com/css?family=Work+Sans:400,600" rel="stylesheet")
+  link(href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet")
+body
+  #contacto
+    include partials/_nav.pug
+    .contenedor
+      .lead
+        h2 Contacto
+      .mapa
+        .
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1861.7124822232588!2d-89.5234712240365!3d21.055682599602495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f56784fbefce7dd%3A0x9236b8a059a3706d!2sMerida+-+Motul+11480%2C+Yucat%C3%A1n!5e0!3m2!1ses!2smx!4v1522876023864" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      .info
+        .izquierda
+          .section
+            h3 Paseo Andanza
+            p Tablaje Catastral No. 11480
+            p Carretera Mérida-Motul
+            br
+            p T. 5284-0030
+        .centro
+          .section
+            h3 Administración 
+            h4 Jaime Ramos
+            a(href="mailto:jaime@orange.com.mx") jaime@orange.com.mx
+          .section
+            h3 Mercadotecnia 
+            h4 Jaime Ramos
+            a(href="mailto:jaime@orange.com.mx") jaime@orange.com.mx
+          .section
+            h3 Comercialización locales y kioskos  
+            h4 Jaime Ramos
+            a(href="mailto:jaime@orange.com.mx") jaime@orange.com.mx
+            
+        .derecha
+          .section
+            h3 Comercialización de espacios publicitarios y stands 
+            h4 Jaime Ramos
+            a(href="mailto:jaime@orange.com.mx") jaime@orange.com.mx
+          .section
+            h3 Corporativo Mercadotecnia
+            h4 Jaime Ramos
+            a(href="mailto:jaime@orange.com.mx") jaime@orange.com.mx
+    .formulario
+      form(action="post.php")
+        h2 Mándanos un mensaje
+        .uno
+          input(type="text" name="" placeholder="Nombre Completo")
+          input(type="text" name="" placeholder="Interés")
+          input(type="email" name="" placeholder="Correo Electrónico")
+        .dos
+          .option
+            label Sexo
+            .botones
+              input(type="radio" name="genero" value="Femenino")
+              label Femenino            
+              input(type="radio" name="genero" value="Masculino") 
+              label Masculino
+          textarea(type="text" placeholder="Mensaje")
+        .tres
+          input(type="submit" name="enviar" value="Enviar")
+            
+        
+        
+          
+    include partials/_footer.pug
+  script(src="assets/js/jquery.js")
+  script(src="assets/js/script.js")
+    

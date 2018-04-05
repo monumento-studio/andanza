@@ -1,0 +1,46 @@
+#servicios
+  .contenedor
+    margin: 150px auto 100px
+    width: 70vw
+    .lead
+      margin-bottom: 50px
+      h2
+        font-family: $roboto
+        font-size: 40px
+    .servicios
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      grid-column-gap: 20px
+      .left, .center, .rigth
+        .servicio
+          margin-bottom: 100px
+          .logo
+            img
+              width: 30%
+          .texto
+            h3
+              font-size: 24px
+              font-family: $roboto
+            p
+              line-height: 1.4
+@media screen and (max-width: 840px)
+  #servicios
+    .contenedor
+      width: 85vw
+      .lead
+        h2
+          font-family: $roboto
+          font-size: 40px
+      .servicios
+        display: grid
+        grid-template-columns: 1fr
+        grid-column-gap: 20px
+        .left, .center, .rigth
+          .servicio
+            margin-bottom: 50px
+            .logo
+              img
+                width: 30%
+            .texto
+              p
+                line-height: 1.4

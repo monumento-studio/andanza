@@ -1,0 +1,63 @@
+doctype
+head
+  title Paseo Andanza
+  meta(charset="utf-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  meta(name="format-detection" content="telephone=no")
+  link(rel="icon" href="assets/img/favicon.png" type="image/x-icon")
+  link(rel="stylesheet" type="text/css" href="assets/css/style.css")
+  link(href="https://fonts.googleapis.com/css?family=Work+Sans:400,600" rel="stylesheet")
+  link(href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet")
+body
+  #servicios
+    include partials/_nav.pug
+    .contenedor
+      .lead
+        h2 Servicios
+      .servicios
+        .left
+          .servicio
+            .logo
+              img(src="assets/img/p.svg")
+            .texto
+              h3 Estacionamiento
+              p 1 hr: $14 pesos
+              p La primera hora o fracción se cobra completa, a partir de la segunda hora se cobra adicional a la primera hora de acuerdo a las siguientes fracciones:
+              p Primeros 30 minutos: $6 pesos <br>Primeros 60 minutos: $14 pesos <br>Sábado y domingo, 6ª. y 7ª. hora sin costo. A partir de la 8ª. hora se cobra bloque completo de la hora.
+              p Boleto perdido: $150 pesos más el tiempo de estancia
+              p No hay tiempo de tolerancia.
+              p Horario de Servicio de 6:00 am a 1:00 am
+              p Motos pagan estacionamiento. No tomar boleto, se entrega boleto en área de motos.
+              p Sótano 1, Columna A-13
+        .center
+          .servicio
+            .logo
+              img(src="assets/img/agua.svg")
+            .texto
+              h3 Lavado de Autos
+              p Contamos con el servicio de lavado de autos, donde te ofrecemos lavado y encerado de tu vehículo. Podrás encontrarlo en cada uno de nuestros niveles de estacionamiento. Un servicio donde podrás dejar tu auto en las mejores manos mientras realizas tus compras.
+          .servicio
+            .logo
+              img(src="assets/img/enfermeria.svg")
+            .texto
+              h3 Enfermería y Protección Civil
+              p Para su tranquilidad, contamos con un servicio de paramédico de 9:00 am a 9:00 p.m, con atención médica pre hospitalaria y de primer contacto en padecimiento de inicio súbito y para la estabilización médica clínica en situaciones de urgencia.
+        .rigth
+          .servicio
+            .logo
+              img(src="assets/img/dinero.svg")
+            .texto
+              h3 Bancos
+              p Los mejores servicios bancarios y cambio de divisas se encuentran a tu disposición:
+              p Banorte ubicado en Power Center <br>Banamex ubicado en Power Center <br>Bancomer ubicado en Power Center
+          .servicio
+            .logo
+              img(src="assets/img/mas.svg")
+            .texto
+              h3 Seguridad
+              p Contamos con sistema de seguridad controlado por un circuito cerrado de video y personal altamente calificado las 24 horas del día, durante los 365 días del año
+        
+    include partials/_footer.pug
+  script(src="assets/js/jquery.js")
+  script(src="assets/js/script.js")
+    

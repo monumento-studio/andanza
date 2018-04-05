@@ -1,0 +1,220 @@
+nav.des
+  background: white
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  height: 100px
+  z-index: 100 !important
+  -webkit-transform: translate3d(0,0,0)
+  .logo
+    position: absolute
+    top: 50%
+    left: 40px
+    transform: translateY(-50%)
+    a
+      img
+        width: 300px
+  .links
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    display: flex
+    align-items: center
+    width: 100%
+    ul
+      margin: 0 auto
+      li
+        padding-right: 100px
+        display: block
+        position: relative
+        float: left
+        a
+          color: $gris
+          text-decoration: none
+        .liner, .linea, .linev
+          height: 5px
+          width: 0
+          position: absolute
+          top: 288%
+          text-align: center
+        .liner
+          background: $rojo
+        .linea
+          background: $azul
+        .linev
+          background: $verde
+
+        &:hover
+          .liner, .linea, .linev
+            width: calc(100% - 100px)
+            transition: width 300ms ease
+  .redes
+    position: absolute
+    right: 40px
+    top: 50%
+    transform: translateY(-50%)
+    ul
+      li
+        list-style: none
+        display: inline
+        padding-left: 10px
+        a
+          img
+            height: 20px
+            width: 30px
+nav.resp
+  display: none
+@media (max-width: 1700px)
+  nav.des
+    .logo
+      a
+        img
+          width: 200px
+    .links
+      ul
+        li
+          padding-right: 30px
+          display: block
+          position: relative
+          float: left
+          font-size: $web-fontb
+          a
+          .liner, .linea, .linev
+            top: 370%
+          &:hover
+            .liner, .linea, .linev
+              width: calc(100% - 30px)
+              transition: width 300ms ease
+    .redes
+      ul
+        li
+          a
+            img
+              height: 15px
+              width: 30px
+
+
+@media (max-width: 1200px)
+  nav.des
+    .logo
+      a
+        img
+          width: 150px
+    .links
+      ul
+        li
+          padding-right: 30px
+          display: block
+          position: relative
+          float: left
+          font-size: $web-fontb
+    .redes
+      ul
+        li
+          padding-left: 5px !important
+          a
+            img
+              height: 12px
+              width: 30px
+@media screen and (max-width: 840px)
+  nav.des
+    display: none
+  .navhe
+    max-height: 600px !important
+    transition: all 300ms ease
+  nav.resp
+    display: block
+    background: white
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    max-height: 100px
+    overflow-y: hidden
+    transition: all 300ms ease
+    z-index: 10
+    .ham
+      position: absolute
+      right: 30px
+      top: 45px
+      height: 20px
+      cursor: pointer
+      width: 30px
+      .lineas
+        width: 30px
+        height: 1px
+        background: $gris
+        &:first-child
+          position: absolute
+          top: 0
+          transition: transform 300ms ease
+        &:nth-child(2)
+          position: absolute
+          top: 50%
+          transform: translateY(-50%)
+          transition: opacity 300ms ease
+        &:nth-child(3)
+          position: absolute
+          bottom: 0
+          transition: transform 300ms ease
+    .clicked
+      .lineas
+        &:first-child
+          position: absolute
+          top: 50%
+          transform: translateY(-50%)
+          transform: rotate(-45deg)
+          transition: transform 300ms ease
+        &:nth-child(2)
+          position: absolute
+          top: 50%
+          transform: translateY(-50%)
+          opacity: 0
+          transition: opacity 300ms ease
+        &:nth-child(3)
+          position: absolute
+          bottom: 50%
+          transform: translateY(50%)
+          transform: rotate(45deg)
+          transition: transform 300ms ease
+    .logo
+      position: absolute
+      top: 40px
+      left: 30px
+      a
+        img
+          width: 200px
+    .links
+      position: relative
+      padding: 0
+      margin: 140px 0 50px
+      align-items: center
+      width: 100%
+      left: 50%
+      transform: translateX(-50%)
+      display: block
+      ul
+        li
+          font-size: $web-font
+          list-style: none
+          text-align: left
+          padding-bottom: 30px
+          a
+            color: $gris
+            text-decoration: none
+    .redes
+      margin:  0 auto
+      ul
+        margin: 0 auto
+        text-align: left
+        padding-bottom: 50px
+        li
+          list-style: none
+          display: inline
+          padding-right: 30px
+          a
+            img
+              height: 20px
+              width: 20px

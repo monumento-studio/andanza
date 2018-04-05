@@ -1,0 +1,211 @@
+#home
+  .top-home
+    position: relative
+    height: 100vh
+    .leneas
+      img
+        position: relative
+        z-index: 9
+        width: 100vw
+    .hero
+      position: absolute
+      width: 100%
+      height: 100vh
+      background-image: url("../img/bg-home.jpg")
+      background-position: center
+      background-size: cover
+      background-attachment: fixed
+      top: 0
+      z-index: 1 !important
+      -webkit-transform: translate3d(0,0,0)
+    .lead
+      background: white
+      padding: 35px 0
+      position: absolute
+      bottom: 0
+      width: 100vw
+      text-align: center
+      z-index: 5
+      h1
+        letter-spacing: 1.2px
+        position: relative
+        font-size: $font-lead
+        font-family: $roboto
+        font-weight: $ligth
+        span
+          font-weight: $bold
+  .med-home
+    background: $gris-claro
+    padding: 100px 0
+    .posts
+      position: relative
+      z-index: 6
+      --content-width: 70vw
+      --gutter: 40px
+      --columns: 3
+      --row-size: calc(( var(--content-width) - (var(--gutter) * (var(--columns) - 1))) / var(--columns))
+      display: grid
+      width: 100%
+      max-width: var(--content-width)
+      grid-template-columns: repeat(var(--columns), 1fr)
+      grid-auto-rows: var(--row-size)
+      grid-column-gap: var(--gutter)
+      grid-row-gap: var(--gutter)
+      margin: 0 auto
+      .post
+        position: relative
+        cursor: pointer
+        overflow: hidden
+        text-align: center
+        &:first-child
+          .overlay
+            background: $rojo
+          &:active
+            .overlay
+              top: 0
+              transition: all 600ms ease
+              -webkit-transition: all 600ms ease
+              -moz-transition: all 600ms ease
+              -o-transition: all 600ms ease
+              background: $rojo
+          &:hover
+            .overlay
+              top: 0
+              transition: all 600ms ease
+              -webkit-transition: all 600ms ease
+              -moz-transition: all 600ms ease
+              -o-transition: all 600ms ease
+              background: $rojo
+        &:nth-child(2)
+          .overlay
+            background: $azul
+          &:hover
+            .overlay
+              top: 0
+              transition: all 600ms ease
+              -webkit-transition: all 600ms ease
+              -moz-transition: all 600ms ease
+              -o-transition: all 600ms ease
+              background: $azul
+        &:nth-child(3)
+          .overlay
+            background: $verde
+          &:hover
+            .overlay
+              top: 0
+              transition: all 600ms ease
+              -webkit-transition: all 600ms ease
+              -moz-transition: all 600ms ease
+              -o-transition: all 600ms ease
+              background: $verde
+        &:nth-child(4)
+          .overlay
+            background: $rojo
+          &:hover
+            .overlay
+              top: 0
+              transition: all 600ms ease
+              -webkit-transition: all 600ms ease
+              -moz-transition: all 600ms ease
+              -o-transition: all 600ms ease
+              background: $rojo
+        &:nth-child(5)
+          .overlay
+            position: absolute
+            left: 0
+            top: 0
+            right: 0
+            bottom: 0
+            cursor: default
+        &:nth-child(6)
+          .overlay
+            background: $azul
+          &:active, &:focus, &:hover
+            .overlay
+              top: 0
+              transition: all 600ms ease
+              -webkit-transition: all 600ms ease
+              -moz-transition: all 600ms ease
+              -o-transition: all 600ms ease
+              background: $azul
+        .overlay
+          position: absolute
+          left: 0
+          top: 120%
+          right: 0
+          bottom: 0
+          display: flex
+          flex-direction: column
+          justify-content: center
+          transition: all 600ms ease
+          -webkit-transition: all 600ms ease
+          -moz-transition: all 600ms ease
+          -o-transition: all 600ms ease
+          a
+            color: white
+            text-decoration: none
+            font-size: 24px
+  .bottom-home
+    margin-bottom: 100px
+    .lead
+      margin-top: 100px
+      h1
+        font-size: $font-lead
+        text-align: center
+        padding-bottom: 20px
+        font-family: $roboto
+    .mapa
+      width: 70vw
+      margin: 0 auto
+      iframe
+        width: 100%
+
+@media screen and (max-width: 840px)
+  #home
+    .top-home
+      .leneas
+        width: 100vw
+        overflow: hidden
+        img
+          width: 150vh
+      .hero
+        background-attachment: scroll
+      .lead
+        h1
+    .med-home
+      .posts
+        --content-width: 85vw
+        --gutter: 40px
+        --columns: 1
+        .post
+          .overlay
+            position: absolute
+            left: 0
+            top: 80%
+            right: 0
+            bottom: 0
+            display: flex
+            flex-direction: column
+            justify-content: center
+            transition: all 600ms ease
+            -webkit-transition: all 600ms ease
+            -moz-transition: all 600ms ease
+            -o-transition: all 600ms ease
+            a
+              color: white
+              text-decoration: none
+              font-size: 18px
+    .bottom-home
+      .lead
+        h1
+      .mapa
+        width: 85vw
+        iframe
+@supports (-webkit-overflow-scrolling: touch)
+  #home
+    .top-home
+      .leneas
+        img
+      .hero
+        background-image: url("../img/bg-home.jpg")
+        background-attachment: scroll

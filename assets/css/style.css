@@ -314,13 +314,22 @@ nav.des {
   height: 100px;
   z-index: 100 !important;
   -webkit-transform: translate3d(0, 0, 0); }
-  nav.des a .logo {
+  nav.des .logo {
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 40px;
     transform: translateY(-50%); }
-    nav.des a .logo img {
-      width: 300px; }
+    nav.des .logo a {
+      position: static;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: pink;
+      z-index: 999; }
+      nav.des .logo a img {
+        position: absolute;
+        width: 300px;
+        display: inline-block; }
   nav.des .links {
     position: absolute;
     top: 50%;
@@ -371,7 +380,7 @@ nav.resp {
   display: none; }
 
 @media (max-width: 1700px) {
-  nav.des a .logo img {
+  nav.des .logo a img {
     width: 200px; }
   nav.des .links ul li {
     padding-right: 30px;
@@ -388,7 +397,7 @@ nav.resp {
     height: 15px;
     width: 30px; } }
 @media (max-width: 1200px) {
-  nav.des a .logo img {
+  nav.des .logo a img {
     width: 150px; }
   nav.des .links ul li {
     padding-right: 30px;
@@ -462,11 +471,11 @@ nav.resp {
       transform: translateY(50%);
       transform: rotate(45deg);
       transition: transform 300ms ease; }
-    nav.resp a .logo {
+    nav.resp .logo {
       position: absolute;
       top: 40px;
       left: 30px; }
-      nav.resp a .logo img {
+      nav.resp .logo a img {
         width: 200px; }
     nav.resp .links {
       position: relative;

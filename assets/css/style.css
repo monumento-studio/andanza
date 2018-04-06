@@ -314,12 +314,12 @@ nav.des {
   height: 100px;
   z-index: 100 !important;
   -webkit-transform: translate3d(0, 0, 0); }
-  nav.des .logo {
+  nav.des a .logo {
     position: absolute;
     top: 50%;
     left: 40px;
     transform: translateY(-50%); }
-    nav.des .logo a img {
+    nav.des a .logo img {
       width: 300px; }
   nav.des .links {
     position: absolute;
@@ -371,7 +371,7 @@ nav.resp {
   display: none; }
 
 @media (max-width: 1700px) {
-  nav.des .logo a img {
+  nav.des a .logo img {
     width: 200px; }
   nav.des .links ul li {
     padding-right: 30px;
@@ -388,7 +388,7 @@ nav.resp {
     height: 15px;
     width: 30px; } }
 @media (max-width: 1200px) {
-  nav.des .logo a img {
+  nav.des a .logo img {
     width: 150px; }
   nav.des .links ul li {
     padding-right: 30px;
@@ -462,11 +462,11 @@ nav.resp {
       transform: translateY(50%);
       transform: rotate(45deg);
       transition: transform 300ms ease; }
-    nav.resp .logo {
+    nav.resp a .logo {
       position: absolute;
       top: 40px;
       left: 30px; }
-      nav.resp .logo a img {
+      nav.resp a .logo img {
         width: 200px; }
     nav.resp .links {
       position: relative;
